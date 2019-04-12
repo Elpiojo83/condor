@@ -1,0 +1,37 @@
+<form ngForm="project">
+  <label for="name">Projektname</label>
+  <input id="name" type="text" [(ngModel)]="newProject.name" name="name">
+  <label for="description">Beschreibung</label>
+  <input id="description" type="text" [(ngModel)]="newProject.description" name="description">
+</form>
+<button (click)="addProject(newProject)">Add Project</button>
+
+
+{{newProject | json}}
+
+<div>
+  <table>
+    <tr *ngFor="let project of projects">
+      <td>
+        {{project?.id}}
+      </td>
+      <td>
+        {{project?.name}}
+      </td>
+      <td>
+        {{project?.description}}
+      </td>
+      <td>
+        <button (click)="deleteProject(project)">löschen</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<div>
+  <pre>
+    {{ projects | json }}
+  </pre>
+</div>
+
