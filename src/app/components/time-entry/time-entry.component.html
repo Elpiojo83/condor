@@ -1,3 +1,38 @@
-<p>
-  time-entry works!
-</p>
+<form ngForm="user">
+  <label for="startTime">Start</label>
+  <input id="startTime" type="text" [(ngModel)]="newTimeEntry.startTime" name="startTime">
+
+  <label for="endTime">Ende</label>
+  <input id="endTime" type="text" [(ngModel)]="newTimeEntry.endTime" name="endTime">
+</form>
+<button (click)="addTimeEntry(newTimeEntry)">Add Time</button>
+
+
+{{newTimeEntry | json}}
+
+<div>
+  <table>
+    <tr *ngFor="let timeEntry of timeEntries">
+      <td>
+        {{timeEntry?.id}}
+      </td>
+      <td>
+        {{timeEntry?.startTime}}
+      </td>
+      <td>
+        {{timeEntry?.endTime}}
+      </td>
+      <td>
+        <button (click)="deleteTimeEntry(timeEntry)">löschen</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<div>
+  <pre>
+    {{ users | json }}
+  </pre>
+</div>
+

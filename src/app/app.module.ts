@@ -8,6 +8,9 @@ import { UserComponent } from './components/user/user.component';
 import { TimeEntryComponent } from './components/time-entry/time-entry.component';
 import {FormsModule} from '@angular/forms';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,8 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

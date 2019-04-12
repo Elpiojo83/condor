@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TimeEntryComponent } from './time-entry.component';
+import {FormsModule} from '@angular/forms';
 
 describe('TimeEntryComponent', () => {
   let component: TimeEntryComponent;
@@ -8,7 +9,8 @@ describe('TimeEntryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TimeEntryComponent ]
+      declarations: [ TimeEntryComponent ],
+      imports: [FormsModule]
     })
     .compileComponents();
   }));

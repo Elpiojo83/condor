@@ -1,3 +1,37 @@
-<p>
-  user works!
-</p>
+<form ngForm="user">
+  <label for="firstName">Vorname</label>
+  <input id="firstName" type="text" [(ngModel)]="newUser.firstName" name="firstName">
+  <label for="lastName">Nachname</label>
+  <input id="lastName" type="text" [(ngModel)]="newUser.lastName" name="lastName">
+</form>
+<button (click)="addUser(newUser)">Add User</button>
+
+
+{{newUser | json}}
+
+<div>
+  <table>
+    <tr *ngFor="let user of users">
+      <td>
+        {{user?.id}}
+      </td>
+      <td>
+        {{user?.firstName}}
+      </td>
+      <td>
+        {{user?.lastName}}
+      </td>
+      <td>
+        <button (click)="deleteUser(user)">löschen</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<div>
+  <pre>
+    {{ users | json }}
+  </pre>
+</div>
+
