@@ -1,9 +1,24 @@
 <form ngForm="user">
+
+  <label for="project">Projekt</label>
+  <select [(ngModel)]="newTimeEntry.projectId" name="project" id="project">
+    <option *ngFor="let project of projects"
+            [value]="project.id"
+    >{{project.name}}</option>
+  </select>
+
+  <label for="user">User</label>
+  <select [(ngModel)]="newTimeEntry.userId" name="user" id="user">
+    <option *ngFor="let user of users"
+            [value]="user.id"
+    >{{user.firstName}} {{user.lastName}}</option>
+  </select>
+
   <label for="startTime">Start</label>
-  <input id="startTime" type="text" [(ngModel)]="newTimeEntry.startTime" name="startTime">
+  <input id="startTime" type="datetime-local" [(ngModel)]="newTimeEntry.startTime" name="startTime">
 
   <label for="endTime">Ende</label>
-  <input id="endTime" type="text" [(ngModel)]="newTimeEntry.endTime" name="endTime">
+  <input id="endTime" type="datetime-local" [(ngModel)]="newTimeEntry.endTime" name="endTime">
 </form>
 <button (click)="addTimeEntry(newTimeEntry)">Add Time</button>
 
@@ -23,6 +38,9 @@
         {{timeEntry?.endTime}}
       </td>
       <td>
+        {{timeEntry?.duration}}
+      </td>
+      <td>
         <button (click)="deleteTimeEntry(timeEntry)">löschen</button>
       </td>
     </tr>
@@ -30,9 +48,4 @@
 </div>
 
 
-<div>
-  <pre>
-    {{ users | json }}
-  </pre>
-</div>
-
+<div echarts [options]="chartOption" class="demo-chart"></div>

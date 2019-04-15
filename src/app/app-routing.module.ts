@@ -6,7 +6,7 @@ import {TimeEntryComponent} from './components/time-entry/time-entry.component';
 
 const routes: Routes = [
   {path: '', component: ProjectComponent},
-  {path: 'user', component: UserComponent},
+  {path: 'users', component: UserComponent},
   {path: 'time-entries', component: TimeEntryComponent}
 ];
 

@@ -4,4 +4,5 @@ export interface TimeEntry {
   userId: number;
   startTime: any;
   endTime: any;
+  duration: any;
 }

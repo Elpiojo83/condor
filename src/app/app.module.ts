@@ -7,6 +7,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { UserComponent } from './components/user/user.component';
 import { TimeEntryComponent } from './components/time-entry/time-entry.component';
 import {FormsModule} from '@angular/forms';
+import {NgxEchartsModule} from 'ngx-echarts';
 
 
 
@@ -22,7 +23,7 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-
+    NgxEchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

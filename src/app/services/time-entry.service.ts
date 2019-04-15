@@ -11,9 +11,9 @@ export class TimeEntryService {
 
   constructor() {
     this.timeEntries = [
-      {id: 1, projectId: 1, userId: 1, startTime: '01.10.2016 08:00:00', endTime: '01.10.2016 08:25:00'},
-      {id: 2, projectId: 1, userId: 1, startTime: '01.10.2016 08:25:00', endTime: '01.10.2016 08:40:00'},
-      {id: 2, projectId: 1, userId: 1, startTime: '01.10.2016 08:40:00', endTime: '01.10.2016 08:55:00'},
+      {id: 1, projectId: 1, userId: 1, startTime: '01.10.2016 08:00:00', endTime: '01.10.2016 08:25:00', duration: 8.00},
+      {id: 2, projectId: 2, userId: 1, startTime: '01.10.2016 08:25:00', endTime: '01.10.2016 08:40:00', duration: 3.00},
+      {id: 2, projectId: 3, userId: 1, startTime: '01.10.2016 08:40:00', endTime: '01.10.2016 08:55:00', duration: 4.00},
     ];
   }
 
